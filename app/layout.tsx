@@ -69,7 +69,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://appmitra.in"),
 };
 
-const jsonLd = {
+const jsonLdOrganization = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "AppMitra Creations",
@@ -92,6 +92,20 @@ const jsonLd = {
   ],
 };
 
+const jsonLdWebSite = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "AppMitra Creations",
+  url: "https://appmitra.in",
+  description:
+    "Digital Transformation & Tech Solutions: web development, app development, SaaS, and digital marketing.",
+  publisher: {
+    "@type": "Organization",
+    name: "AppMitra Creations",
+    url: "https://appmitra.in",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -104,7 +118,15 @@ export default function RootLayout({
       >
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLdOrganization),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLdWebSite),
+          }}
         />
         <Header />
         <main className="min-h-screen">{children}</main>
