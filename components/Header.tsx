@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 
 const navItems = [
   { name: "Services", href: "#services" },
+  { name: "Pricing", href: "#pricing" },
   { name: "About", href: "#about" },
   { name: "Blog", href: "/blog" },
   { name: "Contact", href: "#contact" },

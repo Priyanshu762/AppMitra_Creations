@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import PricingSection from "@/components/PricingSection";
 import About from "@/components/About";
 import BlogSection from "@/components/BlogSection";
 import Contact from "@/components/Contact";
@@ -16,6 +17,7 @@ export default function Home() {
     <div className="flex flex-col gap-0">
       <Hero />
       <Services />
+      <PricingSection />
       <About />
       <BlogSection />
       <Contact />
